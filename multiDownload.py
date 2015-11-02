@@ -11,7 +11,8 @@ if len(sys.argv) > 2:
     sys.exit(2) 
 if len(sys.argv) == 2:
     process = int(sys.argv[1])
-
+if len(sys.argv) == 1:
+    process = 1
 def getRange(url):
     request = urllib2.Request(url)
     request.get_method = lambda : 'HEAD'
