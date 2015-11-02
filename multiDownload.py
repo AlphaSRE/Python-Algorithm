@@ -45,11 +45,11 @@ def downloader(Range):
     response = urllib2.urlopen(request)
     package = response.read()
     try:
-        with open('qq-multi-2', 'r+') as f:
+        with open('qq-multi-2.exe', 'r+') as f:
             f.seek(Range[0])
             f.write(package)
     except Exception as e:
-        with open('qq-multi-2','w') as f:
+        with open('qq-multi-2.exe','w') as f:
             f.seek(Range[0])
             f.write(package)
 
