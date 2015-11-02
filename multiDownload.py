@@ -43,7 +43,6 @@ def downloader(Range):
     headers['Range'] = realRange
     request = urllib2.Request(url, headers=headers)
     response = urllib2.urlopen(request)
-    print response.info()
     package = response.read()
     try:
         with open('qq-multi-2', 'r+') as f:
